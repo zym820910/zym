@@ -1,0 +1,41 @@
+.dl_window {
+  background: #fff;
+  border: 2px solid black;
+}
+
+
+.dl_closeWindowButton{
+  position: absolute;
+  background: url(../../images/dialog/close.gif) no-repeat;
+  width: 14px;
+  height: 14px;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.dl_caption{
+  background: url(../../images/dialog/dialog.gif) no-repeat 0px 5px;
+  height: 25px;
+  line-height: 25px;
+  padding-left: 15px;
+}
+
+.dl_title{
+    position: relative;
+	background-color: #eee;
+	height: 25px;
+	margin: 1px;
+}
+
+
+.dl_overlay{
+	background: #F0eeee;
+}
+
+.bitchliang {
+  background:url(../../images/dialog/loading.gif);
+  background-position:center;
+  background-repeat:no-repeat;
+}

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1278/JXT/src/OMDWeb/src/main/webapp/WEB-INF
+END
+sitemesh.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/342/JXT/src/OMDWeb/src/main/webapp/WEB-INF/sitemesh.xml
+END
+urlrewrite.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/342/JXT/src/OMDWeb/src/main/webapp/WEB-INF/urlrewrite.xml
+END
+decorators.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1277/JXT/src/OMDWeb/src/main/webapp/WEB-INF/decorators.xml
+END
+menu-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/342/JXT/src/OMDWeb/src/main/webapp/WEB-INF/menu-config.xml
+END
+applicationContext-struts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/342/JXT/src/OMDWeb/src/main/webapp/WEB-INF/applicationContext-struts.xml
+END
+checkbox.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1253/JXT/src/OMDWeb/src/main/webapp/WEB-INF/checkbox.html
+END
+dwr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/342/JXT/src/OMDWeb/src/main/webapp/WEB-INF/dwr.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1277/JXT/src/OMDWeb/src/main/webapp/WEB-INF/web.xml
+END
+ecside.tld
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1173/JXT/src/OMDWeb/src/main/webapp/WEB-INF/ecside.tld
+END

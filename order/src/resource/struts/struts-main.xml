@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="index" namespace="/"  extends="struts-interceptors">
+		<global-results>
+			<result name="error">/common/404.jsp</result>
+			<result name="input">/common/404.jsp</result>
+		</global-results>
+		<action name="index" class="action.main.MenuAction" method="index">
+	    	<result name="success">/WEB-INF/pages/login/index.jsp</result>
+	    </action>
+		<!-- 
+		<action name="*" class="action.main.MenuAction" method="{1}">
+	    	<result name="success">/WEB-INF/pages/login/{1}.jsp</result>
+	    </action>
+		 -->
+	</package>
+	<package name="menu" namespace="/menu"  extends="struts-interceptors">
+		<global-results>
+			<result name="error">/common/404.jsp</result>
+			<result name="input">/common/404.jsp</result>
+		</global-results>
+		
+		<action name="*" class="action.main.MenuAction" method="{1}">
+	    	<result name="success">/WEB-INF/pages/login/{1}.jsp</result>
+	    </action>
+		
+	</package>
+	<!-- 
+	<package name="admin" namespace="/admin"  extends="struts-interceptors">
+		<global-results>
+			<result name="error">/common/404.jsp</result>
+			<result name="input">/common/404.jsp</result>
+		</global-results>
+		<action name="list" class="action.main.MenuAction" method="list">
+	    	<result name="success">/WEB-INF/pages/login/left.jsp</result>
+	    </action>
+		<action name="*" class="action.main.MenuAction" method="{1}">
+	    	<result name="success">/WEB-INF/pages/login/{1}.jsp</result>
+	    </action>
+	</package>
+	 -->
+</struts>

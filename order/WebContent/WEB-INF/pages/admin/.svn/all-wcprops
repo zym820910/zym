@@ -1,0 +1,257 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1459/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin
+END
+main.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1256/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/main.jsp
+END
+user_add.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1493/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/user_add.jsp
+END
+prePaidCard_add.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1512/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/prePaidCard_add.jsp
+END
+setList.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1443/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/setList.jsp
+END
+left.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1407/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/left.jsp
+END
+user_role_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1321/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/user_role_list.jsp
+END
+role_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1256/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/role_list.jsp
+END
+card3g_item_info.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1419/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/card3g_item_info.jsp
+END
+card3g_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1505/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/card3g_list.jsp
+END
+setEdit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1524/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/setEdit.jsp
+END
+top.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1520/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/top.jsp
+END
+setAdd.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1524/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/setAdd.jsp
+END
+role-search.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1523/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/role-search.jsp
+END
+money_charged_details_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1509/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/money_charged_details_list.jsp
+END
+end.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/672/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/end.jsp
+END
+card3g_maincard_edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1411/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/card3g_maincard_edit.jsp
+END
+role_edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1496/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/role_edit.jsp
+END
+index.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1434/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/index.jsp
+END
+uploadwait.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1153/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/uploadwait.jsp
+END
+usageMonthly_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1443/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/usageMonthly_list.jsp
+END
+bill_usage_monthly_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/1438/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/bill_usage_monthly_list.jsp
+END
+card3g_package_edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1418/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/card3g_package_edit.jsp
+END
+upload.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1521/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/upload.jsp
+END
+admin_log_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1510/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/admin_log_list.jsp
+END
+blank.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1256/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/blank.jsp
+END
+user_info.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1443/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/user_info.jsp
+END
+user_role_relate.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1321/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/user_role_relate.jsp
+END
+user-history-bill.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1507/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/user-history-bill.jsp
+END
+user_detail.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1523/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/user_detail.jsp
+END
+user_change_password.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1405/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/user_change_password.jsp
+END
+card3g_user_edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1417/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/card3g_user_edit.jsp
+END
+user_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1443/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/user_list.jsp
+END
+prePaidCard_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1513/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/prePaidCard_list.jsp
+END
+role_add.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1496/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/role_add.jsp
+END
+card3g_add.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1505/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/card3g_add.jsp
+END
+user_detail_by_role.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1524/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/user_detail_by_role.jsp
+END
+admin_change_user_password.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1475/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/admin_change_user_password.jsp
+END
+setDetail.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1443/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/setDetail.jsp
+END
+user-search.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1523/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/user-search.jsp
+END
+money_charged_details_add.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1412/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/money_charged_details_add.jsp
+END
+role_detail.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1523/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/role_detail.jsp
+END
+user_edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1459/JXT/src/OMDWeb/src/main/webapp/WEB-INF/pages/admin/user_edit.jsp
+END

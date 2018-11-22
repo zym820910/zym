@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>OMDWeb</display-name>
+
+	<!-- Define the default CSS Theme -->
+	<context-param>
+		<param-name>csstheme</param-name>
+		<param-value>simplicity</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>uploadPath</param-name>
+		<param-value>/var/upload</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>ecsidePreferencesLocation</param-name>
+		<param-value>/ecside.properties</param-value>
+	</context-param>
+
+	<!-- Define the basename for a resource bundle for I18N -->
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+		<param-value>ApplicationResources</param-value>
+	</context-param>
+
+	<!--
+		Fallback locale if no bundles found for browser's preferred locale
+	-->
+	<!--
+		Force a single locale using param-name
+		'javax.servlet.jsp.jstl.fmt.locale'
+	-->
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.fallbackLocale</param-name>
+		<param-value>en</param-value>
+	</context-param>
+
+	<!-- Context Configuration locations for Spring XML files -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+            classpath*:applicationContext-resources.xml
+            classpath*:applicationContext-hibernate.xml
+            classpath*:applicationContext-aop.xml
+            classpath*:applicationContext-cache.xml
+            classpath*:applicationContext-security2.xml
+            
+            /WEB-INF/applicationContext-*.xml
+        </param-value>
+	</context-param>
+	<!-- Context Param Initialization End-->
+
+
+
+	<!-- Filter Definitions Start -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>ecsideExport</filter-name>
+		<filter-class>itaf.framework.excel.ECSideFilter</filter-class>
+		<init-param>
+			<param-name>useEasyDataAccess</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>useEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	
+	<filter>
+		<filter-name>exportFilter</filter-name>
+		<filter-class>org.displaytag.filter.ResponseOverrideFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>gzipFilter</filter-name>
+		<filter-class>net.sf.ehcache.constructs.web.filter.GzipFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>sessionFilter</filter-name>
+		<filter-class>
+			org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+		<init-param>
+			<param-name>singleSession</param-name>
+			<param-value>false</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter>
+		<filter-name>contextUserFilter</filter-name>
+		<filter-class>com.svw.framework.web.filter.ContextUserFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>struts-prepare</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareFilter</filter-class>
+		<init-param>
+			<param-name>actionPackages</param-name>
+			<param-value>solution.omd.action</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>struts</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsExecuteFilter</filter-class>
+		<init-param>
+			<param-name>actionPackages</param-name>
+			<param-value>solution.omd.action</param-value>
+		</init-param>
+	</filter>
+	
+	<!-- Filter Definisions End -->
+
+	<!-- Filter Mappings Start -->
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>ecsideExport</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+<!--	<filter-mapping>-->
+<!--		<filter-name>encodingFilter</filter-name>-->
+<!--		<url-pattern>/dwr/*</url-pattern>-->
+<!--	</filter-mapping>-->
+	<filter-mapping>
+		<filter-name>sessionFilter</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>gzipFilter</filter-name>
+		<url-pattern>*.css</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>gzipFilter</filter-name>
+		<url-pattern>*.html</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>gzipFilter</filter-name>
+		<url-pattern>*.js</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>gzipFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>exportFilter</filter-name>
+		<url-pattern>*.html</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>contextUserFilter</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>contextUserFilter</filter-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>struts-prepare</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>struts</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>sessionFilter</filter-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<!-- Filter Mappings End -->
+
+<!--	<servlet>-->
+<!--		<servlet-name>dwr-invoker</servlet-name>-->
+<!--		<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>-->
+<!--		<init-param>-->
+<!--			<param-name>debug</param-name>-->
+<!--			<param-value>true</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>config-common</param-name>-->
+<!--			<param-value>/WEB-INF/classes/dwr-common.xml</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>config-forcast</param-name>-->
+<!--			<param-value>/WEB-INF/classes/dwr-forcast.xml</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>config-order</param-name>-->
+<!--			<param-value>/WEB-INF/classes/dwr-order.xml</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>config-parameter</param-name>-->
+<!--			<param-value>/WEB-INF/classes/dwr-parameter.xml</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>config-product</param-name>-->
+<!--			<param-value>/WEB-INF/classes/dwr-product.xml</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>config-quota</param-name>-->
+<!--			<param-value>/WEB-INF/classes/dwr-quota.xml</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>config-sample</param-name>-->
+<!--			<param-value>/WEB-INF/classes/dwr-sample.xml</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>config-system</param-name>-->
+<!--			<param-value>/WEB-INF/classes/dwr-system.xml</param-value>-->
+<!--		</init-param>-->
+<!--		-->
+<!--			can't be used with websphere <init-param>-->
+<!--			<param-name>customConfigurator</param-name>-->
+<!--			<param-value>com.svw.framework.web.util.DwrConfigurator</param-value>-->
+<!--			</init-param>-->
+<!--		-->
+<!--	</servlet>-->
+<!--	<servlet-mapping>-->
+<!--		<servlet-name>dwr-invoker</servlet-name>-->
+<!--		<url-pattern>/dwr/*</url-pattern>-->
+<!--	</servlet-mapping>-->
+
+
+	<!-- Listeners Start-->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	<!-- Listeners End-->
+
+	<session-config>
+	    <session-timeout>30</session-timeout>
+	</session-config> 
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://3g.gitelecom.net/taglibs</taglib-uri>
+			<taglib-location>/WEB-INF/tlds/jxt-taglib.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+<!--		<welcome-file>default.jsp</welcome-file>-->
+	</welcome-file-list>
+</web-app>

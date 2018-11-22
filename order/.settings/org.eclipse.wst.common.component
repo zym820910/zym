@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="order">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/resource"/>
+        <dependent-module archiveName="ITAFShareLib.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ITAFShareLib/ITAFShareLib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SVWFramework.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SVWFramework/SVWFramework">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="OMDService.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/OMDService/OMDService">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ITAFramework.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ITAFramework/ITAFramework">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ITAFCommon.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ITAFCommon/ITAFCommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="OMDData.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/OMDData/OMDData">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ITAFService.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ITAFService/ITAFService">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="order"/>
+        <property name="java-output-path" value="/order/build/classes"/>
+    </wb-module>
+</project-modules>

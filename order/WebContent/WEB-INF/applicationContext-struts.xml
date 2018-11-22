@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+       default-lazy-init="true">
+<!-- 
+    <bean id="linkAction" class="com.shmc.portal.link.web.action.LinkAction" scope="prototype">
+        <property name="linkManager" ref="linkManager" />
+        <dwr:remote javascript="LinkAction">
+            <dwr:include method="ajDelete" />
+        	<dwr:convert type="bean" class="com.shmc.portal.link.po.*"/>
+        </dwr:remote>
+    </bean>
+ -->    
+    
+</beans>
