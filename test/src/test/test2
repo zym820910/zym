@@ -1,81 +1,81 @@
 if(StringUtils.isBlank(pns[j])){
-				
+				234
 				if(StringUtils.isNotBlank(card_nos[j])){
 					if(!validatorFasion(validator_card_no, card_nos[j])){
-						param.put("error", "第"+ line + "行，sim卡号格式不正确" );
+						param.put("error", "绗�"+ line + "琛岋紝sim鍗″彿鏍煎紡涓嶆纭�" );
 						return param;
 					}
 					k = arrayValidator(card_nos, card_nos[j],j);
 					if(k != -1){
-						param.put("error", "第"+ line + "行的卡号与第"+ (k+2) +"行重复" );
+						param.put("error", "绗�"+ line + "琛岀殑鍗″彿涓庣"+ (k+2) +"琛岄噸澶�" );
 						return param;
 					}
 				}
 				
-				//imsi校验
+				//imsi鏍￠獙
 				if(StringUtils.isNotBlank(imsis[j])){
 					if(!validatorFasion(validator_imsi, imsis[j])){
-						param.put("error", "第"+ line + "行，sim卡的imsis格式不正确" );
+						param.put("error", "绗�"+ line + "琛岋紝sim鍗＄殑imsis鏍煎紡涓嶆纭�" );
 						return param;
 					}
 					k = arrayValidator(imsis, imsis[j],j);
 					if(k != -1){
-						param.put("error", "第"+ line + "行的imsi号与第"+ (k+2) +"行重复" );
+						param.put("error", "绗�"+ line + "琛岀殑imsi鍙蜂笌绗�"+ (k+2) +"琛岄噸澶�" );
 						return param;
 					}
 				}
-				//iccid校验
+				//iccid鏍￠獙
 				if(StringUtils.isNotBlank(iccids[j])){
 					if(iccids[j].length() != 20){
-						param.put("error", "第"+ line + "行，sim卡iccid格式不正确" );
+						param.put("error", "绗�"+ line + "琛岋紝sim鍗ccid鏍煎紡涓嶆纭�" );
 						return param;
 					}
 					k = arrayValidator(iccids, iccids[j],j);
 					if(k != -1){
-						param.put("error", "第"+ line + "行的iccid号与第"+ (k+2) +"行重复" );
+						param.put("error", "绗�"+ line + "琛岀殑iccid鍙蜂笌绗�"+ (k+2) +"琛岄噸澶�" );
 						return param;
 					}
 				}
 				
 				
 			}else{
-				//PN不为空，则保存整个产品，而且全部零件格式校验
+				//PN涓嶄负绌猴紝鍒欎繚瀛樻暣涓骇鍝侊紝鑰屼笖鍏ㄩ儴闆朵欢鏍煎紡鏍￠獙
 			    if(StringUtils.isBlank(card_nos[j])){
-			    	param.put("error", "第"+ line + "行，sim卡号为空" );
+			    	param.put("error", "绗�"+ line + "琛岋紝sim鍗″彿涓虹┖" );
 					return param;
 			    }else if(!validatorFasion(validator_card_no, card_nos[j])){
-			    	param.put("error", "第"+ line + "行，sim卡 卡号 格式错误" );
+			    	param.put("error", "绗�"+ line + "琛岋紝sim鍗� 鍗″彿 鏍煎紡閿欒" );
 					return param;
 			    }
 		    	k = arrayValidator(card_nos, card_nos[j],j);
 				if(k != -1){
-					param.put("error", "第"+ line + "行的卡号与第"+ (k+2) +"行重复" );
+					param.put("error", "绗�"+ line + "琛岀殑鍗″彿涓庣"+ (k+2) +"琛岄噸澶�" );
 					return param;
 				}
 				
 			    if(StringUtils.isBlank(imsis[j])){
-			    	param.put("error", "第"+ line + "行，sim卡的 imsi 为空" );
+			    	param.put("error", "绗�"+ line + "琛岋紝sim鍗＄殑 imsi 涓虹┖" );
 					return param;
 			    }else if(!validatorFasion(validator_imsi, imsis[j])){
-			    	param.put("error", "第"+ line + "行，sim卡 imsi 格式错误" );
+			    	param.put("error", "绗�"+ line + "琛岋紝sim鍗� imsi 鏍煎紡閿欒" );
 					return param;
 			    }
 		    	k = arrayValidator(imsis, imsis[j],j);
 				if(k != -1){
-					param.put("error", "第"+ line + "行的imsi号与第"+ (k+2) +"行重复" );
+					param.put("error", "绗�"+ line + "琛岀殑imsi鍙蜂笌绗�"+ (k+2) +"琛岄噸澶�" );
 					return param;
 				}
 			    
 			    if(StringUtils.isBlank(iccids[j])){
-			    	param.put("error", "第"+ line + "行，sim卡的iccid为空" );
+			    	param.put("error", "绗�"+ line + "琛岋紝sim鍗＄殑iccid涓虹┖" );
 					return param;
 			    }else if(iccids[j].length() != 20){
-			    	param.put("error", "第"+ line + "行，sim卡 iccid 格式错误" );
+			    	param.put("error", "绗�"+ line + "琛岋紝sim鍗� iccid 鏍煎紡閿欒" );
 					return param;
 			    }
 		    	k = arrayValidator(iccids, iccids[j],j);
 				if(k != -1){
-					param.put("error", "第"+ line + "行的iccid号与第"+ (k+2) +"行重复" );
+					param.put("error", "绗�"+ line + "琛岀殑iccid鍙蜂笌绗�"+ (k+2) +"琛岄噸澶�" );
 					return param;
 				}
 			}
@@ -100,36 +100,36 @@ if(StringUtils.isBlank(pns[j])){
 			
 			
 			
-			//数据库 数据 唯一性检查
+			//鏁版嵁搴� 鏁版嵁 鍞竴鎬ф鏌�
 		for (int j = 0; j<rows; j++ ){
-			int line = j + 2;  //出错行数
+			int line = j + 2;  //鍑洪敊琛屾暟
 			if(StringUtils.isBlank(pns[j])){
-				//卡号校验
+				//鍗″彿鏍￠獙
 				if(StringUtils.isNotBlank(card_nos[j])){
 					cs = cardSimDao.findUniqueBy("cardNo", card_nos[j]);
 					if(null != cs){
 						date = DateUtil.formatDate(cs.getCreatedDate(), "yyyy-MM-dd HH:mm:ss");
-						param.put("error", "第"+ line + "行，sim卡的卡号: "+ card_nos[j] +" 于 "+ date +" 已入库，请核实！" );
+						param.put("error", "绗�"+ line + "琛岋紝sim鍗＄殑鍗″彿: "+ card_nos[j] +" 浜� "+ date +" 宸插叆搴擄紝璇锋牳瀹烇紒" );
 						return param;
 					}
 				}
-				//imsi校验
+				//imsi鏍￠獙
 				if(StringUtils.isNotBlank(imsis[j])){
 					
 					cs = cardSimDao.findUniqueBy("imsi", imsis[j]);
 					if(null != cs){
 						date = DateUtil.formatDate(cs.getCreatedDate(), "yyyy-MM-dd HH:mm:ss");
-						param.put("error", "第"+ line + "行，sim卡的IMSI: "+ imsis[j] +" 于 "+ date +" 已入库，请核实！" );
+						param.put("error", "绗�"+ line + "琛岋紝sim鍗＄殑IMSI: "+ imsis[j] +" 浜� "+ date +" 宸插叆搴擄紝璇锋牳瀹烇紒" );
 						return param;
 					}
 				}
 				
-				//iccid校验
+				//iccid鏍￠獙
 				if(StringUtils.isNotBlank(iccids[j])){
 					cs = cardSimDao.findUniqueBy("iccid", iccids[j]);
 					if(null != cs){
 						date = DateUtil.formatDate(cs.getCreatedDate(), "yyyy-MM-dd HH:mm:ss");
-						param.put("error", "第"+ line + "行，sim卡的iccid: "+ iccids[j] +" 于 "+ date +" 已入库，请核实！" );
+						param.put("error", "绗�"+ line + "琛岋紝sim鍗＄殑iccid: "+ iccids[j] +" 浜� "+ date +" 宸插叆搴擄紝璇锋牳瀹烇紒" );
 						return param;
 					}
 				}
@@ -137,7 +137,7 @@ if(StringUtils.isBlank(pns[j])){
 				if(StringUtils.isBlank(pns[j])){
 					wp = warehouseProductDao.findUniqueBy("productNo", pns[j]);
 					if(null != wp){
-						param.put("error", "第"+ line + "行，产品序列号'" + pns[j] + "'之前已入库，请核实！" );
+						param.put("error", "绗�"+ line + "琛岋紝浜у搧搴忓垪鍙�'" + pns[j] + "'涔嬪墠宸插叆搴擄紝璇锋牳瀹烇紒" );
 						return param;
 					}
 				}
@@ -147,7 +147,7 @@ if(StringUtils.isBlank(pns[j])){
 				sim_param.put("imsi", imsis[j]);
 				cs = cardSimDao.findUniqueSim(sim_param);
 				if(null != cs){
-					param.put("error", "第"+ line + "行，该零件之前已入库，请核实！" );
+					param.put("error", "绗�"+ line + "琛岋紝璇ラ浂浠朵箣鍓嶅凡鍏ュ簱锛岃鏍稿疄锛�" );
 					sim_param = null;
 					return param;
 				}
