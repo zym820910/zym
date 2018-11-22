@@ -1,81 +1,81 @@
 if(StringUtils.isBlank(pns[j])){
-				//haha123
+				//haha1234
 				if(StringUtils.isNotBlank(card_nos[j])){
 					if(!validatorFasion(validator_card_no, card_nos[j])){
-						param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨ºÅ¸ñÊ½²»ÕýÈ·" );
+						param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½ï¿½Å¸ï¿½Ê½ï¿½ï¿½ï¿½ï¿½È·" );
 						return param;
 					}
 					k = arrayValidator(card_nos, card_nos[j],j);
 					if(k != -1){
-						param.put("error", "µÚ"+ line + "ÐÐµÄ¿¨ºÅÓëµÚ"+ (k+2) +"ÐÐÖØ¸´" );
+						param.put("error", "ï¿½ï¿½"+ line + "ï¿½ÐµÄ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+ (k+2) +"ï¿½ï¿½ï¿½Ø¸ï¿½" );
 						return param;
 					}
 				}
 				
-				//imsiÐ£Ñé
+				//imsiÐ£ï¿½ï¿½
 				if(StringUtils.isNotBlank(imsis[j])){
 					if(!validatorFasion(validator_imsi, imsis[j])){
-						param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨µÄimsis¸ñÊ½²»ÕýÈ·" );
+						param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½ï¿½ï¿½imsisï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½È·" );
 						return param;
 					}
 					k = arrayValidator(imsis, imsis[j],j);
 					if(k != -1){
-						param.put("error", "µÚ"+ line + "ÐÐµÄimsiºÅÓëµÚ"+ (k+2) +"ÐÐÖØ¸´" );
+						param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ðµï¿½imsiï¿½ï¿½ï¿½ï¿½ï¿½"+ (k+2) +"ï¿½ï¿½ï¿½Ø¸ï¿½" );
 						return param;
 					}
 				}
-				//iccidÐ£Ñé
+				//iccidÐ£ï¿½ï¿½
 				if(StringUtils.isNotBlank(iccids[j])){
 					if(iccids[j].length() != 20){
-						param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨iccid¸ñÊ½²»ÕýÈ·" );
+						param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½iccidï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½È·" );
 						return param;
 					}
 					k = arrayValidator(iccids, iccids[j],j);
 					if(k != -1){
-						param.put("error", "µÚ"+ line + "ÐÐµÄiccidºÅÓëµÚ"+ (k+2) +"ÐÐÖØ¸´" );
+						param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ðµï¿½iccidï¿½ï¿½ï¿½ï¿½ï¿½"+ (k+2) +"ï¿½ï¿½ï¿½Ø¸ï¿½" );
 						return param;
 					}
 				}
 				
 				
 			}else{
-				//PN²»Îª¿Õ£¬Ôò±£´æÕû¸ö²úÆ·£¬¶øÇÒÈ«²¿Áã¼þ¸ñÊ½Ð£Ñé
+				//PNï¿½ï¿½Îªï¿½Õ£ï¿½ï¿½ò±£´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Ð£ï¿½ï¿½
 			    if(StringUtils.isBlank(card_nos[j])){
-			    	param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨ºÅÎª¿Õ" );
+			    	param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½" );
 					return param;
 			    }else if(!validatorFasion(validator_card_no, card_nos[j])){
-			    	param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨ ¿¨ºÅ ¸ñÊ½´íÎó" );
+			    	param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½" );
 					return param;
 			    }
 		    	k = arrayValidator(card_nos, card_nos[j],j);
 				if(k != -1){
-					param.put("error", "µÚ"+ line + "ÐÐµÄ¿¨ºÅÓëµÚ"+ (k+2) +"ÐÐÖØ¸´" );
+					param.put("error", "ï¿½ï¿½"+ line + "ï¿½ÐµÄ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+ (k+2) +"ï¿½ï¿½ï¿½Ø¸ï¿½" );
 					return param;
 				}
 				
 			    if(StringUtils.isBlank(imsis[j])){
-			    	param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨µÄ imsi Îª¿Õ" );
+			    	param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½ï¿½ï¿½ imsi Îªï¿½ï¿½" );
 					return param;
 			    }else if(!validatorFasion(validator_imsi, imsis[j])){
-			    	param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨ imsi ¸ñÊ½´íÎó" );
+			    	param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½ imsi ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½" );
 					return param;
 			    }
 		    	k = arrayValidator(imsis, imsis[j],j);
 				if(k != -1){
-					param.put("error", "µÚ"+ line + "ÐÐµÄimsiºÅÓëµÚ"+ (k+2) +"ÐÐÖØ¸´" );
+					param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ðµï¿½imsiï¿½ï¿½ï¿½ï¿½ï¿½"+ (k+2) +"ï¿½ï¿½ï¿½Ø¸ï¿½" );
 					return param;
 				}
 			    
 			    if(StringUtils.isBlank(iccids[j])){
-			    	param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨µÄiccidÎª¿Õ" );
+			    	param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½ï¿½ï¿½iccidÎªï¿½ï¿½" );
 					return param;
 			    }else if(iccids[j].length() != 20){
-			    	param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨ iccid ¸ñÊ½´íÎó" );
+			    	param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½ iccid ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½" );
 					return param;
 			    }
 		    	k = arrayValidator(iccids, iccids[j],j);
 				if(k != -1){
-					param.put("error", "µÚ"+ line + "ÐÐµÄiccidºÅÓëµÚ"+ (k+2) +"ÐÐÖØ¸´" );
+					param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ðµï¿½iccidï¿½ï¿½ï¿½ï¿½ï¿½"+ (k+2) +"ï¿½ï¿½ï¿½Ø¸ï¿½" );
 					return param;
 				}
 			}
@@ -100,36 +100,36 @@ if(StringUtils.isBlank(pns[j])){
 			
 			
 			
-			//Êý¾Ý¿â Êý¾Ý Î¨Ò»ÐÔ¼ì²é
+			//ï¿½ï¿½ï¿½Ý¿ï¿½ ï¿½ï¿½ï¿½ï¿½ Î¨Ò»ï¿½Ô¼ï¿½ï¿½
 		for (int j = 0; j<rows; j++ ){
-			int line = j + 2;  //³ö´íÐÐÊý
+			int line = j + 2;  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if(StringUtils.isBlank(pns[j])){
-				//¿¨ºÅÐ£Ñé
+				//ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½
 				if(StringUtils.isNotBlank(card_nos[j])){
 					cs = cardSimDao.findUniqueBy("cardNo", card_nos[j]);
 					if(null != cs){
 						date = DateUtil.formatDate(cs.getCreatedDate(), "yyyy-MM-dd HH:mm:ss");
-						param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨µÄ¿¨ºÅ: "+ card_nos[j] +" ÓÚ "+ date +" ÒÑÈë¿â£¬ÇëºËÊµ£¡" );
+						param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½: "+ card_nos[j] +" ï¿½ï¿½ "+ date +" ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½Êµï¿½ï¿½" );
 						return param;
 					}
 				}
-				//imsiÐ£Ñé
+				//imsiÐ£ï¿½ï¿½
 				if(StringUtils.isNotBlank(imsis[j])){
 					
 					cs = cardSimDao.findUniqueBy("imsi", imsis[j]);
 					if(null != cs){
 						date = DateUtil.formatDate(cs.getCreatedDate(), "yyyy-MM-dd HH:mm:ss");
-						param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨µÄIMSI: "+ imsis[j] +" ÓÚ "+ date +" ÒÑÈë¿â£¬ÇëºËÊµ£¡" );
+						param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½ï¿½ï¿½IMSI: "+ imsis[j] +" ï¿½ï¿½ "+ date +" ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½Êµï¿½ï¿½" );
 						return param;
 					}
 				}
 				
-				//iccidÐ£Ñé
+				//iccidÐ£ï¿½ï¿½
 				if(StringUtils.isNotBlank(iccids[j])){
 					cs = cardSimDao.findUniqueBy("iccid", iccids[j]);
 					if(null != cs){
 						date = DateUtil.formatDate(cs.getCreatedDate(), "yyyy-MM-dd HH:mm:ss");
-						param.put("error", "µÚ"+ line + "ÐÐ£¬sim¿¨µÄiccid: "+ iccids[j] +" ÓÚ "+ date +" ÒÑÈë¿â£¬ÇëºËÊµ£¡" );
+						param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½simï¿½ï¿½ï¿½ï¿½iccid: "+ iccids[j] +" ï¿½ï¿½ "+ date +" ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½Êµï¿½ï¿½" );
 						return param;
 					}
 				}
@@ -137,7 +137,7 @@ if(StringUtils.isBlank(pns[j])){
 				if(StringUtils.isBlank(pns[j])){
 					wp = warehouseProductDao.findUniqueBy("productNo", pns[j]);
 					if(null != wp){
-						param.put("error", "µÚ"+ line + "ÐÐ£¬²úÆ·ÐòÁÐºÅ'" + pns[j] + "'Ö®Ç°ÒÑÈë¿â£¬ÇëºËÊµ£¡" );
+						param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Ðºï¿½'" + pns[j] + "'Ö®Ç°ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½Êµï¿½ï¿½" );
 						return param;
 					}
 				}
@@ -147,7 +147,7 @@ if(StringUtils.isBlank(pns[j])){
 				sim_param.put("imsi", imsis[j]);
 				cs = cardSimDao.findUniqueSim(sim_param);
 				if(null != cs){
-					param.put("error", "µÚ"+ line + "ÐÐ£¬¸ÃÁã¼þÖ®Ç°ÒÑÈë¿â£¬ÇëºËÊµ£¡" );
+					param.put("error", "ï¿½ï¿½"+ line + "ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½Êµï¿½ï¿½" );
 					sim_param = null;
 					return param;
 				}
