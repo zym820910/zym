@@ -1,5 +1,5 @@
 if(StringUtils.isBlank(pns[j])){
-				//haha
+				//haha1
 				if(StringUtils.isNotBlank(card_nos[j])){
 					if(!validatorFasion(validator_card_no, card_nos[j])){
 						param.put("error", "��"+ line + "�У�sim���Ÿ�ʽ����ȷ" );
