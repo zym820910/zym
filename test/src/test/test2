@@ -1,5 +1,5 @@
 if(StringUtils.isBlank(pns[j])){
-				//卡号校验
+				//haha
 				if(StringUtils.isNotBlank(card_nos[j])){
 					if(!validatorFasion(validator_card_no, card_nos[j])){
 						param.put("error", "第"+ line + "行，sim卡号格式不正确" );
